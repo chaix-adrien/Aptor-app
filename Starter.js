@@ -13,7 +13,6 @@ class Starter extends React.Component {
     }
   }
   render() {
-    const c = this.props.classes
     const { name, nickname, adress, description } = this.state
     return (
       <View style={styles.root}>
@@ -23,13 +22,17 @@ class Starter extends React.Component {
         <TextInput ref={e => this.adress = e} style={styles.inputs} value={adress} mode="outlined" label="Adresse client" onChangeText={e => this.setState({ adress: e })} onSubmitEditing={e => this.description.focus()} />
         <TextInput ref={e => this.description = e} style={styles.inputs} value={description} mode="outlined" label="Decription" onChangeText={e => this.setState({ description: e })} onSubmitEditing={e => Keyboard.dismiss()} />
         <View style={{ width: "100%", alignItems: "center" }}>
-          <Button icon="check" mode="contained" disabled={!name && !nickname && !adress && !description} onPress={() => this.props.start(this.state)} style={{ width: 150, borderRadius: 3, marginTop: 20 }}>
+          <Button icon="check" mode="contained" disabled={!name && !nickname && !adress && !description} onPress={() => {
+            this.props.start(this.state)
+            this.setState({
+              name: "", nickname: "",
+              adress: "",
+              description: ""
+            })
+          }} style={{ width: 150, borderRadius: 3, marginTop: 20 }}>
             Démarrer
           </Button>
         </View>
-        <Button icon="clock" mode="contained" color="#F1F1F1" onPress={() => console.log('Pressed')} style={{ width: 150, borderRadius: 3, position: "absolute", bottom: 30, right: 30 }}>
-          Historique
-        </Button>
       </View>
     );
   }

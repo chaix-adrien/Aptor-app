@@ -1,8 +1,9 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 8152,
+  "packagerPid": 7864,
   "expoServerNgrokUrl": "https://sp-qrj.chaix-adrien.aptor-app.exp.direct",
   "packagerNgrokUrl": "https://packager.sp-qrj.chaix-adrien.aptor-app.exp.direct",
-  "ngrokPid": 6636
+  "ngrokPid": 9936,
+  "devToolsPort": 19002
 }
