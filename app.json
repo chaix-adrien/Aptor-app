@@ -21,6 +21,7 @@
 			"supportsTablet": true
 		},
 		"android": {
+			"icon": "./assets/icon.png",
 			"package": "com.adrienchaix.aptor"
 		}
 	}
