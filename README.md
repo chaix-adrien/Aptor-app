@@ -1,2 +1,2 @@
 # Aptor-app
-Samml app for registering appointments
+Simple app for registering appointments
